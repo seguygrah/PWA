@@ -17,7 +17,7 @@ self.addEventListener('install', (e) =>
     e.waitUntil(
         caches.open (cacheName).then ((cache) =>
         {
-            console.log ('[Service Worker] Caching all the files');
+            console.log ('[Service Worker] Caching app shell');
             return cache.addAll(cacheFiles);
         })
     )
@@ -42,7 +42,7 @@ self.addEventListener('fetch', function (e)
         caches.match(e.request).then(function (r)
         {
             //download the file if it is not in the cache,
-            return r || fetch (e.request).then(function (response)
+            return r || fetch(e.request).then(function (response)
             {
                 // add the new file to cache
                 return caches.open(cacheName).then(function (cache)

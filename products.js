@@ -40,7 +40,7 @@ let products = [
       "title": "Laser Pointer",
       "description": "Drive your cat crazy with this <em>amazing</em> product.",
       "price": 49.99,
-      "image": "images/laser-pointer.jpg",
+      "image": "images/four.jpg",
       "availableInventory": 25,
       "rating": 4
     }
